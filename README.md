@@ -8,10 +8,10 @@ Comando para crear un proyecto: npm create vite:
 -  Se selecciona todo lo relacionado al proyecto, tipo de proyecto y nombre
 -  Se usa el comando: npm install React para crear las dependencias necesarias 
 
-Para escribir una expesión de JS en JSX se usan las {}  
+Para escribir una expesión de JS en JSX se usan las {}:  
 
-{-Imprime una variable string}  
-{-Imprime una variable tipo numérico}  
+    <h1>{-Imprime una variable string}</h1>  
+    <h1>{-Imprime una variable tipo numérico}</h1>  
 
 Para imprimir un objeto se usa {JSON.stringify( -objeto )}  
 
@@ -19,9 +19,9 @@ Los componentes reciben props (propiedades que se le envían a componentes)
 
 Para instalar los prop-types se ejecuta el comando: npm install prop-types  
 Para definir valores por defectos se usa:   
-FirstApp.defaultProps = {  
-  name: 'No hay nombre'  
-}  
+      name: 'No hay nombre'  
+    FirstApp.defaultProps = {  
+    }  
 
 # Pruebas
 
@@ -62,4 +62,75 @@ Las pruebas deben ser:
 
 ### AAA
 
-###
+#### Arrange (Arreglar)
+
+Es el paso en el cual se establece el estado inicial, se conoce como el sujeto a probar, en este paso se  
+
+- Inicializan variables
+- Se realizan las importaciones necesarias
+- Se prepara el ambiente a probar
+
+#### Act (Actuar)
+
+Es en donde se aplican acciones o estímulos al sujeto de pruebas, se puede:  
+
+- Llamar métodos
+- Simular clicks
+- Realizar acciones sobre el paso anterior
+
+Se aplican estímulos al sujeto de pruebas para preparse para el siguiente paso  
+
+#### Assert (Afirmar)
+
+Es el observar el comportamiento resultante, como:  
+
+- Algún cambio
+- Algo incremente
+- Nada suceda
+
+## Mitos
+
+### Hacen que la aplicación no tenga errores
+
+Es falso, al ser escritas por el mismo u otro programador pueden haber fallos al realizarlas y no se implementen bien  
+
+### Las pruebas no pueden fallar
+
+Es falso, las pruebas sí pueden fallar, se pueden implementar pruebas que arrojen falsos positivos o falsos negativos  
+
+### Hacen más lenta la aplicación
+
+Las pruebas no llegan a la parte de producción, solo se quedan en el estado de desarrollo. Las pruebas son locales  
+
+### Es una pérdida de tiempo
+
+Es una perdida de tiempo si se prueban cosas que no tiene sentido probar  
+
+### Hay que probar todo
+
+Puede que sí, puede que no. 
+
+# Configuración del framework de Testing en Vite
+
+Para vite se debe realizar la instalación del framework de testing, en este caso será Jest y React Testing Library  
+
+## Intalación
+
+Para instalar Jest se ejecuta el siguiente comando en la terminal:  
+
+    npm install --save-dev jest
+
+Porsterior a esto se debe configurar los comandos script en el package.json:  
+
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test": "jest"
+    },
+
+Para ejecutar las pruebas se ejecuta el comando:  
+
+    npm run jest
+
+Para siempre estar viendo las pruebas y que no se tenga que ejecutar el primer comando se debe agregar "--watchAll" al script de ejecución  
