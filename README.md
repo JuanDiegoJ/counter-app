@@ -19,8 +19,9 @@ Los componentes reciben props (propiedades que se le envían a componentes)
 
 Para instalar los prop-types se ejecuta el comando: npm install prop-types  
 Para definir valores por defectos se usa:   
-      name: 'No hay nombre'  
+
     FirstApp.defaultProps = {  
+        name: 'No hay nombre'  
     }  
 
 # Pruebas
