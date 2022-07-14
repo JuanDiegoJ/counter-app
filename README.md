@@ -135,3 +135,13 @@ Para ejecutar las pruebas se ejecuta el comando:
     npm run jest
 
 Para siempre estar viendo las pruebas y que no se tenga que ejecutar el primer comando se debe agregar "--watchAll" al script de ejecución  
+
+Para tener la intelligence para buscar el método adecuado al realizar las pruebas en Jest se instala la siguiente dependencia
+
+    npm install -D @types/jest
+
+## Detalles
+
+- No se pueden hacer pruebas de algo que no sea exportado
+- No se debería ejecutar todo el test suite, debido a que pueden haber muchas pruebas a ejecutarse, lo mejor es ejecutar únicamente el que se desea probar
+- 
