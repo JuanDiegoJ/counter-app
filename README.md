@@ -144,4 +144,16 @@ Para tener la intelligence para buscar el método adecuado al realizar las prueb
 
 - No se pueden hacer pruebas de algo que no sea exportado
 - No se debería ejecutar todo el test suite, debido a que pueden haber muchas pruebas a ejecutarse, lo mejor es ejecutar únicamente el que se desea probar
-- 
+- Se debe configurar el babel con el comando, son dependencias de desarrollo
+- Se debe crear el archivo de babel babel.config.js
+
+    npm install --save-dev babel-jest @babel/core @babel/preset-env
+
+    module.exports = {
+    presets: [
+        ['@babel/preset-env', {targets: {node: 'current'}}]
+        ],
+    };
+
+- Los objetos se comparan en base a su ubicación en memoria y no sobre su contenido
+- Para comparar objetos en Jest se usa expect().toStrictEqual()
