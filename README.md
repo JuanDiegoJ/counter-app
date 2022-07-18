@@ -157,3 +157,4 @@ Para tener la intelligence para buscar el método adecuado al realizar las prueb
 
 - Los objetos se comparan en base a su ubicación en memoria y no sobre su contenido
 - Para comparar objetos en Jest se usa expect().toStrictEqual()
+- Las pruebas de Jest siempre son síncronas
